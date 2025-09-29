@@ -1,0 +1,9 @@
+flask
+transformers>=4.0.0
+torch
+sentencepiece
+numpy
+tqdm
+uvicorn
+werkzeug
+python-dotenv
