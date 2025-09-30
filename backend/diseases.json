@@ -1,0 +1,135 @@
+[
+  {
+    "id": "d001",
+    "name": "Acute Upper Respiratory Infection (likely viral)",
+    "common_symptoms": ["cough", "runny nose", "sore throat", "low-grade fever"],
+    "symptom_templates": [
+      "fever, sore throat, runny nose, cough",
+      "common cold symptoms: cough and rhinorrhea without high fever",
+      "viral upper respiratory infection with sore throat"
+    ],
+    "severity": "low",
+    "immediate_protocol": "Supportive care: paracetamol for fever, advise ORS if dehydrated, rest. Avoid antibiotics unless bacterial signs.",
+    "refer": false,
+    "drugs": ["paracetamol"],
+    "dosage_guidance": {
+      "adult": "Paracetamol 500-1000 mg every 4-6 hours as needed; max 3 g/day.",
+      "pediatric": "Paracetamol 15 mg/kg per dose every 4-6 hours (max 60 mg/kg/day)."
+    }
+  },
+  {
+    "id": "d002",
+    "name": "Community Acquired Pneumonia",
+    "common_symptoms": ["high fever", "productive cough", "shortness of breath", "pleuritic chest pain"],
+    "symptom_templates": [
+      "fever and productive cough with breathlessness",
+      "significant fever and difficulty breathing, chest findings"
+    ],
+    "severity": "high",
+    "immediate_protocol": "Assess SpO2; give oxygen if SpO2 < 92%. Start empirical antibiotic per local STG; arrange referral if severe.",
+    "refer": true,
+    "drugs": ["amoxicillin", "azithromycin"],
+    "dosage_guidance": {
+      "adult": "Amoxicillin 500 mg TDS for 5 days (depending on STG); or alternative as per STG.",
+      "mg_per_kg": 15
+    }
+  },
+  {
+    "id": "d003",
+    "name": "Diarrheal Illness (Acute watery)",
+    "common_symptoms": ["loose stools", "dehydration", "vomiting", "abdominal cramps"],
+    "symptom_templates": [
+      "acute onset watery diarrhea and vomiting",
+      "loose stools and signs of dehydration"
+    ],
+    "severity": "medium",
+    "immediate_protocol": "Assess dehydration; start ORS, zinc for children, consider antibiotics only if dysentery or cholera suspected.",
+    "refer": false,
+    "drugs": ["ORS", "zinc"],
+    "dosage_guidance": {
+      "adult": "Oral rehydration per WHO; zinc for children 20 mg daily for 10–14 days (children >6 months)."
+    }
+  },
+  {
+    "id": "d004",
+    "name": "Malaria (Uncomplicated, suspected/confirmed)",
+    "common_symptoms": ["intermittent fever with chills", "sweating", "headache", "body pain"],
+    "symptom_templates": [
+      "fever with chills and rigors, periodic pattern",
+      "malaria suspected in endemic area with fever and splenomegaly"
+    ],
+    "severity": "medium",
+    "immediate_protocol": "Perform RDT/microscopy if available. If positive: give ACT (Artemisinin-based Combination Therapy) as per NVBDCP. Severe malaria → urgent referral.",
+    "refer": true,
+    "drugs": ["artesunate + sulfadoxine-pyrimethamine (ACT)"],
+    "dosage_guidance": {
+      "adult": "ACT as per NVBDCP: Artesunate 200 mg + SP (1500/75 mg) single dose; dosing adjusted by age/weight."
+    }
+  },
+  {
+    "id": "d005",
+    "name": "Dengue Fever (without warning signs)",
+    "common_symptoms": ["high fever", "severe headache", "retro-orbital pain", "myalgia", "rash"],
+    "symptom_templates": [
+      "acute high-grade fever with body ache and rash",
+      "viral fever in endemic season, dengue suspected"
+    ],
+    "severity": "medium",
+    "immediate_protocol": "Supportive management: paracetamol for fever, oral fluids. Avoid NSAIDs/aspirin. Monitor for warning signs (bleeding, persistent vomiting, abdominal pain).",
+    "refer": true,
+    "drugs": ["paracetamol", "ORS"],
+    "dosage_guidance": {
+      "adult": "Paracetamol 500–1000 mg every 6 hours as needed (max 3 g/day).",
+      "pediatric": "Paracetamol 15 mg/kg every 6 hours as needed."
+    }
+  },
+  {
+    "id": "d006",
+    "name": "Pulmonary Tuberculosis (Presumptive/Confirmed)",
+    "common_symptoms": ["cough >2 weeks", "fever", "night sweats", "weight loss"],
+    "symptom_templates": [
+      "chronic cough with weight loss and fever",
+      "suspected TB with cough more than 2 weeks"
+    ],
+    "severity": "high",
+    "immediate_protocol": "Collect sputum sample for CBNAAT/Xpert MTB/RIF. Initiate treatment under NTEP if confirmed. Isolate patient until on therapy.",
+    "refer": true,
+    "drugs": ["HRZE regimen (isoniazid, rifampicin, pyrazinamide, ethambutol)"],
+    "dosage_guidance": {
+      "adult": "Fixed-dose combination as per body weight: 2 months HRZE + 4 months HR.",
+      "pediatric": "Weight-band–based dosing per NTEP guidelines."
+    }
+  },
+  {
+    "id": "d007",
+    "name": "Hypertension (Newly Detected)",
+    "common_symptoms": ["persistent high BP", "headache", "dizziness", "often asymptomatic"],
+    "symptom_templates": [
+      "BP consistently above 140/90 mmHg",
+      "newly diagnosed high blood pressure"
+    ],
+    "severity": "medium",
+    "immediate_protocol": "Confirm BP with 2–3 readings. Counsel on lifestyle: reduce salt, stop smoking, weight control. Start pharmacotherapy if persistent >160/100 or as per risk profile.",
+    "refer": false,
+    "drugs": ["amlodipine", "hydrochlorothiazide"],
+    "dosage_guidance": {
+      "adult": "Amlodipine 5 mg once daily; may increase to 10 mg. Hydrochlorothiazide 12.5–25 mg once daily."
+    }
+  },
+  {
+    "id": "d008",
+    "name": "Type 2 Diabetes Mellitus",
+    "common_symptoms": ["polyuria", "polydipsia", "polyphagia", "unexplained weight loss", "fatigue"],
+    "symptom_templates": [
+      "excessive thirst and urination with weight loss",
+      "newly detected high random blood glucose >200 mg/dL"
+    ],
+    "severity": "medium",
+    "immediate_protocol": "Confirm with fasting blood glucose / HbA1c. Counsel on diet, exercise. Start metformin unless contraindicated. Refer if complications suspected.",
+    "refer": true,
+    "drugs": ["metformin"],
+    "dosage_guidance": {
+      "adult": "Metformin 500 mg once daily with meals; increase gradually to 1 g BD as tolerated."
+    }
+  }
+]
