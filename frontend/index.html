@@ -1,0 +1,45 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1"/>
+<title>Rural PHC Diagnosis Assistant</title>
+<link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="container">
+    <h1>Rural Diagnosis Assistant</h1>
+    <form id="diagForm">
+      <label>Patient name: <input id="name" /></label>
+      <label>Age: <input id="age" type="number" /></label>
+      <label>Gender: 
+        <select id="gender"><option>Male</option><option>Female</option><option>Other</option></select>
+      </label>
+      <label>Language:
+        <select id="language">
+          <option value="en">English</option>
+          <option value="hi">Hindi</option>
+          <option value="ta">Tamil</option>
+          <option value="te">Telugu</option>
+          <option value="bn">Bengali</option>
+        </select>
+      </label>
+
+      <label>Symptoms (free text):<textarea id="symptoms" rows="4" placeholder="Describe symptoms..."></textarea></label>
+
+      <fieldset>
+        <legend>Vitals (optional)</legend>
+        <label>Pulse: <input id="pulse" type="number" /></label>
+        <label>Systolic BP: <input id="systolic" type="number" /></label>
+        <label>SpO₂: <input id="spo2" type="number" /></label>
+      </fieldset>
+
+      <label>Current medications (comma separated):<input id="meds" /></label>
+      <button type="submit">Diagnose (offline)</button>
+    </form>
+
+    <section id="results"></section>
+  </div>
+<script src="app.js"></script>
+</body>
+</html>
